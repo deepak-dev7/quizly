@@ -1,0 +1,16 @@
+# QUIZLY Production Apache Configuration for InfinityFree & Live Hosting
+DirectoryIndex index.php index.html
+
+# Prevent Directory Browsing
+Options -Indexes
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+

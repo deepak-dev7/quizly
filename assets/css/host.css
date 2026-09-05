@@ -1,0 +1,106 @@
+/* Host Control Room — White + Multi-Color Modern Theme */
+
+.host-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .host-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.room-code-banner {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1.5rem;
+}
+
+.room-code-title {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.room-code-value {
+    font-size: 3.8rem;
+    font-weight: 900;
+    letter-spacing: 8px;
+    color: var(--brand-purple);
+    font-family: monospace;
+}
+
+.control-bar {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.chart-container {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bar-label {
+    width: 36px;
+    height: 36px;
+    font-weight: 900;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #FFF;
+}
+
+.bar-bg {
+    flex: 1;
+    height: 40px;
+    background: var(--bg-subtle);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+.bar-fill {
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border-radius: var(--radius-sm);
+}
+
+.bar-count {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 800;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-family: monospace;
+}
+
+.opt-a { background: linear-gradient(135deg, #EF4444, #DC2626); }
+.opt-b { background: linear-gradient(135deg, #2563EB, #1D4ED8); }
+.opt-c { background: linear-gradient(135deg, #F59E0B, #D97706); }
+.opt-d { background: linear-gradient(135deg, #10B981, #059669); }
